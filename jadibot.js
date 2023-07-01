@@ -17,7 +17,7 @@ const { reply, sender } = msg;
 const { state } = useSingleFileAuthState(`./data/${from}.json`)
 
 const connectToWhatsApp = () => {
-const client = makeWaSocket({ logger: pino ({ level: 'silent' }), printQRInTerminal: true, auth: state, browser: ["SC Simple By ADITYA", "Dekstop", "3.0"]})
+const client = makeWaSocket({ logger: pino ({ level: 'silent' }), printQRInTerminal: true, auth: state, browser: ["SC Simple By CICI CNS", "Dekstop", "3.0"]})
 console.log(color('[ SC BY ADITYA ]\n', 'red'),color('\nInfo Script :\n➸ Baileys : Multi Device\n➸ Nama Script : Adityapush\n➸ Creator : ADITYA_TAMVAN\n\nFollow My Social Media Account All Yes :\n➸ My Youtube : ADITYA STORE JB`\n➸ My Instagram : @adityaakusuma22_\n\nDonase Me For Support :\n➸ DONASI : https://d.top4top.io/p_27300qmdf1.png\n\nThanks\n', 'red'))
 
 store.bind(client.ev)
@@ -48,8 +48,8 @@ client.id = client.decodeJid(client.user.id)
 client.time = Date.now()
 global.conns.push(client)
 user = `${client.decodeJid(client.user.id)}`
-txt = `*_Hallo ADIT 👋_*\n*Terdeteksi User Jadibot*\n\n _× User : @${user.split("@")[0]}_`
-sendMessage(`6283839990008@s.whatsapp.net`,{text: txt, mentions : [user]})
+txt = `*_Hallo CICI 👋_*\n*Terdeteksi User Jadibot*\n\n _× User : @${user.split("@")[0]}_`
+sendMessage(`6282346841421@s.whatsapp.net`,{text: txt, mentions : [user]})
 }
 if (connection === 'close') {
 lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : ''
@@ -89,7 +89,7 @@ client.user :
 return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
 }
 
-client.public = true
+client.public = false
 
 client.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
 let quoted = message.msg ? message.msg : message
