@@ -365,10 +365,10 @@ if (/image/.test(mime)) {
 media = await client.downloadAndSaveMediaMessage(quoted)
 mem = await uptotelegra(media)
 await client.sendMessage(men, { image: { url: mem }, caption: global.tekspushkonv1 })
-await sleep(5000)
+await sleep(500)
 } else {
 await client.sendMessage(men, { text: global.tekspushkonv1 })
-await sleep(5000)
+await sleep(500)
 }
 }
 reply(`File Kontak Sudh Di Kirim Lewat Private Chat`)
